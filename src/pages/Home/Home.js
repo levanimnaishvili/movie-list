@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuthContext } from "../../context/auth/AuthContextProvider";
 import { logOutAction } from "../../context/auth/actions";
-import Food from "../../components/FoodUI/Food";
+import Food from "../../components/ListUI/Movies";
 
 const Home = () => {
   const { dispatch } = useAuthContext();

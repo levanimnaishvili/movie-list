@@ -1,12 +1,12 @@
 import axios from "axios";
 
-export async function fetchFood() {
+export async function fetchMovies() {
   const options = {
     method: "GET",
-    url: "https://the-mexican-food-db.p.rapidapi.com/",
+    url: "https://imdb-top-100-movies.p.rapidapi.com/",
     headers: {
       "X-RapidAPI-Key": process.env.REACT_APP_SECRET,
-      "X-RapidAPI-Host": "the-mexican-food-db.p.rapidapi.com",
+      "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
     },
   };
   const response = await axios.request(options);

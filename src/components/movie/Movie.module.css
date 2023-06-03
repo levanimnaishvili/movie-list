@@ -1,0 +1,52 @@
+.item {
+    list-style: none;
+}
+.card {
+    width: 380px;
+    height: 562px;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: hidden;
+}
+
+.card:hover .overlay {
+    visibility: visible;
+}
+
+.actions {
+    background: linear-gradient(grey, transparent);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    background: linear-gradient(transparent, white);
+}
+.details a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+.details a:hover {
+    scale: 1.1;
+    font-style: italic;
+}

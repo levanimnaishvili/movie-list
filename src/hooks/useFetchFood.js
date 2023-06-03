@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { fetchFood } from "../api/food";
+import { fetchMovies } from "../api/movies";
 
 const useFetchFood = () => {
   const [info, setInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   useEffect(() => {
-    fetchFood()
+    fetchMovies()
       .then((data) => {
         setInfo(data);
       })

@@ -4,7 +4,7 @@ import { signIn } from "../../api/auth";
 import { useAuthContext } from "../../context/auth/AuthContextProvider";
 import { logInAction } from "../../context/auth/actions";
 import { Link, useNavigate } from "react-router-dom";
-import { HOME_PAGE } from "../../constants/routes";
+import { HOME_PATH } from "../../constants/routes";
 
 import { PacmanLoader } from "react-spinners";
 
@@ -24,7 +24,7 @@ const Form = () => {
     signIn(info)
       .then((data) => {
         dispatch(logInAction(data));
-        navigate(HOME_PAGE);
+        navigate(HOME_PATH);
       })
       .catch((err) => {
         setInfo((prev) => ({ ...prev, error: err.message }));
@@ -41,6 +41,7 @@ const Form = () => {
         value={info.userName}
         type="text"
         name="userName"
+        id="userName"
         onChange={(e) => {
           setInfo((prev) => {
             return { ...prev, [e.target.name]: e.target.value };
@@ -54,6 +55,7 @@ const Form = () => {
         value={info.password}
         type="password"
         name="password"
+        id="password"
         onChange={(e) => {
           setInfo((prev) => {
             return { ...prev, [e.target.name]: e.target.value };
@@ -64,7 +66,7 @@ const Form = () => {
       {info.error && <h4>{info.error}</h4>}
       <button onClick={submitHandler}>Submit</button>
       <button>
-        <Link to={HOME_PAGE}>back to home page</Link>
+        <Link to={HOME_PATH}>back to home page</Link>
       </button>
     </form>
   );

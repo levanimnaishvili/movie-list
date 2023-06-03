@@ -1,0 +1,21 @@
+.page {
+    background-color: #ccc;
+}
+.wrapper {
+    width: 420px;
+    padding: 10px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.description {
+    font-style: italic;
+}
+.trailer {
+    display: flex;
+    justify-content: center;
+}
